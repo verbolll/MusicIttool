@@ -1,0 +1,62 @@
+from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
+    QMetaObject, QObject, QPoint, QRect,
+    QSize, QTime, QUrl, Qt)
+from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
+    QFont, QFontDatabase, QGradient, QIcon,
+    QImage, QKeySequence, QLinearGradient, QPainter,
+    QPalette, QPixmap, QRadialGradient, QTransform)
+from PySide6.QtWidgets import (QApplication, QLabel, QMainWindow, QMenuBar,
+    QPushButton, QSizePolicy, QStatusBar, QVBoxLayout,
+    QWidget)
+class Ui_MainWindow(object):
+    def setupUi(self, MainWindow):
+        if not MainWindow.objectName():
+            MainWindow.setObjectName(u"MainWindow")
+        MainWindow.resize(271, 325)
+        self.centralwidget = QWidget(MainWindow)
+        self.centralwidget.setObjectName(u"centralwidget")
+        self.verticalLayout = QVBoxLayout(self.centralwidget)
+        self.verticalLayout.setObjectName(u"verticalLayout")
+        self.selectsong = QLabel(self.centralwidget)
+        self.selectsong.setObjectName(u"selectsong")
+        self.selectsong.setAlignment(Qt.AlignCenter)
+        self.verticalLayout.addWidget(self.selectsong)
+        self.selectButton = QPushButton(self.centralwidget)
+        self.selectButton.setObjectName(u"selectButton")
+        self.verticalLayout.addWidget(self.selectButton)
+        self.loading = QLabel(self.centralwidget)
+        self.loading.setObjectName(u"loading")
+        font = QFont()
+        font.setPointSize(20)
+        self.loading.setFont(font)
+        self.loading.setAlignment(Qt.AlignCenter)
+        self.verticalLayout.addWidget(self.loading)
+        self.doButton = QPushButton(self.centralwidget)
+        self.doButton.setObjectName(u"doButton")
+        self.verticalLayout.addWidget(self.doButton)
+        self.OpenVideoBtn = QPushButton(self.centralwidget)
+        self.OpenVideoBtn.setObjectName(u"OpenVideoBtn")
+        self.OpenVideoBtn.setEnabled(True)
+        self.OpenVideoBtn.setCheckable(False)
+        self.verticalLayout.addWidget(self.OpenVideoBtn)
+        self.Savemovie = QPushButton(self.centralwidget)
+        self.Savemovie.setObjectName(u"Savemovie")
+        self.verticalLayout.addWidget(self.Savemovie)
+        MainWindow.setCentralWidget(self.centralwidget)
+        self.menubar = QMenuBar(MainWindow)
+        self.menubar.setObjectName(u"menubar")
+        self.menubar.setGeometry(QRect(0, 0, 271, 22))
+        MainWindow.setMenuBar(self.menubar)
+        self.statusbar = QStatusBar(MainWindow)
+        self.statusbar.setObjectName(u"statusbar")
+        MainWindow.setStatusBar(self.statusbar)
+        self.retranslateUi(MainWindow)
+        QMetaObject.connectSlotsByName(MainWindow)
+    def retranslateUi(self, MainWindow):
+        MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"\u751f\u6210\u97f3\u9891\u5206\u6790\u89c6\u9891", None))
+        self.selectsong.setText(QCoreApplication.translate("MainWindow", u"\u8bf7\u9009\u62e9\u8981\u5206\u6790\u7684\u97f3\u9891", None))
+        self.selectButton.setText(QCoreApplication.translate("MainWindow", u"\u9009\u62e9\u97f3\u4e50", None))
+        self.loading.setText("")
+        self.doButton.setText(QCoreApplication.translate("MainWindow", u"\u5f00\u59cb\u5206\u6790", None))
+        self.OpenVideoBtn.setText(QCoreApplication.translate("MainWindow", u"\u6253\u5f00\u97f3\u51c6\u89c6\u9891", None))
+        self.Savemovie.setText(QCoreApplication.translate("MainWindow", u"\u4fdd\u5b58\u89c6\u9891", None))
